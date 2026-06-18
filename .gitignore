@@ -1,0 +1,5 @@
+node_modules/
+extension.zip
+.env
+.env.local
+server/.env

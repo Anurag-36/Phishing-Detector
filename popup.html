@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Page Info</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Page Info</h1>
+    <p><strong>Title:</strong> <span id="title">—</span></p>
+    <p><strong>Selected:</strong> <span id="selection">—</span></p>
+    <div id="analysis">
+      <h2>Analysis</h2>
+      <p><strong>Risk Score:</strong> <span id="risk">—</span></p>
+      <p><strong>Status:</strong> <span id="status">—</span></p>
+      <p><strong>Reasons:</strong></p>
+      <ul id="reasons"></ul>
+    </div>
+    <div class="controls">
+      <button id="refresh">Refresh</button>
+      <button id="copy">Copy Selection</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

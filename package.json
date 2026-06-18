@@ -1,0 +1,8 @@
+{
+  "name": "page-info-extension",
+  "version": "1.0.0",
+  "description": "Simple Chrome extension to show page info",
+  "scripts": {
+    "zip": "powershell -Command \"Compress-Archive -Path * -DestinationPath extension.zip -Force\""
+  }
+}
