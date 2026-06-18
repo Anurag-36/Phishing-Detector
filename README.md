@@ -8,7 +8,7 @@ Phishing Detector is a Chrome extension for identifying suspicious websites usin
 - [Built With](#built-with)
 - [Getting Started](#getting-started)
 - [How It Works](#how-it-works)
-- [Security Notes](#security-notes)
+  
 
 ## About The Project
 
@@ -38,7 +38,7 @@ The extension evaluates a page by looking at URL patterns, DOM behavior, SSL usa
 
 ### Optional Proxy Server
 
-If you want server-side reputation checks, create a local `.env` file from the template and install the server dependencies. Keep your API key on your machine only.
+If you want server-side reputation checks, create a local `.env` file from the template and install the server dependencies. 
 
 ```bash
 cd server
@@ -57,11 +57,6 @@ The extension combines a few simple checks:
 4. Reputation checks through the optional proxy server or local fallbacks.
 5. A scoring engine that turns the findings into a readable risk level.
 
-## Security Notes
-
-- API keys are not committed to the repository.
-- Local `.env` files are ignored by git.
-- The server template contains placeholders only.
 
 ## Project Files
 
