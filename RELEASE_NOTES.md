@@ -18,4 +18,3 @@ I am actively working on improvements and additional features, including better 
 ### Notes
 
 - This release is intended for testing and review.
-- Secrets and API keys should stay in local `.env` files only.
