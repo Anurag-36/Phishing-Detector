@@ -1,29 +1,26 @@
 # Phishing Detector
 
-A Chrome extension for fast, explainable phishing detection. It scores pages using URL patterns, DOM signals, SSL checks, and optional reputation lookups without storing secrets in GitHub.
+Phishing Detector is a Chrome extension that helps users spot suspicious websites quickly. It looks at URL structure, page content, SSL usage, and optional reputation checks, then returns a risk score with a short explanation.
 
-## What It Does
+## Overview
 
-- Flags suspicious URLs, forms, scripts, and iframe patterns.
-- Produces a clear risk score with reasons instead of a black-box label.
-- Works locally out of the box.
-- Uses an optional Node.js proxy only when you add your own private API key locally.
+The extension is designed to be lightweight and easy to understand. It runs locally in the browser by default and can connect to an optional Node.js proxy if you want Google Safe Browsing support.
 
 ## Requirements
 
-- Chrome or any Chromium-based browser
-- Node.js 18+ only if you want to run the optional proxy server
+- Chrome or another Chromium-based browser
+- Node.js 18+ for the optional proxy server
 
-## Quick Start
+## Run Locally
 
 1. Open `chrome://extensions/`.
-2. Enable Developer mode.
-3. Click Load unpacked and select this folder.
-4. Open a site, click the extension, and review the score.
+2. Turn on Developer mode.
+3. Select Load unpacked and choose this project folder.
+4. Open a website and use the extension to review the score.
 
-## Optional Proxy Setup
+## Optional Proxy Server
 
-If you want Google Safe Browsing support, create a local env file from the template and keep it out of GitHub:
+To enable server-side reputation checks, install the server dependencies and create a local `.env` file from the provided template. Keep your API key out of GitHub and store it only in your local environment.
 
 ```bash
 cd server
@@ -32,23 +29,20 @@ npm install
 npm start
 ```
 
-The server reads secrets from `server/.env` only. Do not commit that file.
-
-## Project Layout
+## Project Files
 
 - `manifest.json` - Extension manifest
-- `background.js` - Service worker orchestration
+- `background.js` - Service worker
 - `content_script.js` - Page data collection
-- `popup.html`, `popup.js`, `popup.css` - UI
+- `popup.html`, `popup.js`, `popup.css` - Popup interface
 - `scripts/` - Analysis and scoring logic
 - `server/` - Optional proxy server
-- `Req_extracted.txt` - Extracted requirements reference
 
-## Security
+## Security Notes
 
-- No API keys are stored in the repository.
-- Sensitive values belong in local `.env` files only.
-- The repo ignores root `.env` files and `server/.env`.
+- API keys are not stored in the repository.
+- Local `.env` files are ignored by git.
+- The server template uses placeholders only.
 
 ## License
 
